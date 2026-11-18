@@ -1,0 +1,278 @@
+{
+  "_comment": "SIS777 thresholds and lists. Change the criteria by editing this file; no code change needed.",
+  "password": {
+    "max_age_days": 90,
+    "min_age_days": 1,
+    "history": 24,
+    "min_length": 9
+  },
+  "patch": {
+    "max_days_since_install": 60
+  },
+  "antivirus": {
+    "signature_max_days": 7
+  },
+  "screensaver": {
+    "max_timeout_sec": 600
+  },
+  "monthly_check": {
+    "max_days": 30
+  },
+  "services": {
+    "_comment": "PC-05 targets. wuauserv (conflicts with PC-10), Dhcp (would cut the network), CryptSvc and Dnscache are deliberately excluded. Spooler is skipped automatically when a real printer exists.",
+    "targets": [
+      "Spooler",
+      "RemoteRegistry",
+      "upnphost",
+      "SSDPSRV",
+      "WerSvc",
+      "TrkWks",
+      "hidserv",
+      "simptcp",
+      "Browser"
+    ]
+  },
+  "messenger": {
+    "blocklist": [
+      {
+        "name": "카카오톡",
+        "display": [
+          "KakaoTalk",
+          "카카오톡"
+        ],
+        "process": [
+          "kakaotalk.exe"
+        ]
+      },
+      {
+        "name": "네이트온",
+        "display": [
+          "NateOn",
+          "네이트온"
+        ],
+        "process": [
+          "nateonmain.exe",
+          "nateon.exe"
+        ]
+      },
+      {
+        "name": "Skype",
+        "display": [
+          "Skype"
+        ],
+        "process": [
+          "skype.exe"
+        ]
+      },
+      {
+        "name": "Telegram",
+        "display": [
+          "Telegram"
+        ],
+        "process": [
+          "telegram.exe"
+        ]
+      },
+      {
+        "name": "LINE",
+        "display": [
+          "LINE ",
+          "LINE("
+        ],
+        "process": [
+          "line.exe"
+        ]
+      },
+      {
+        "name": "Discord",
+        "display": [
+          "Discord"
+        ],
+        "process": [
+          "discord.exe"
+        ]
+      },
+      {
+        "name": "WeChat",
+        "display": [
+          "WeChat",
+          "위챗"
+        ],
+        "process": [
+          "wechat.exe",
+          "weixin.exe"
+        ]
+      },
+      {
+        "name": "WhatsApp",
+        "display": [
+          "WhatsApp"
+        ],
+        "process": [
+          "whatsapp.exe"
+        ]
+      }
+    ],
+    "allowlist": [],
+    "_allow_comment": "Authorized messengers: after checking, add their names to allowlist to exempt them (e.g. [\"Skype\"])"
+  },
+  "safeusb": {
+    "_comment": "PC-19. If empty or not found, the user picks SafeUSB in the P-11 pop-up and the names are saved here automatically",
+    "product_names": [],
+    "service_names": []
+  },
+  "os_support": {
+    "_comment": "PC-11 end-of-servicing dates per edition (Microsoft release information / lifecycle, checked 2026-11-18). group: consumer (Home, Pro, Pro Education, Pro for Workstations) / enterprise (Enterprise, Education, IoT Enterprise) / ltsc (Enterprise LTSC/LTSB) / iot_ltsc (IoT Enterprise LTSC). Review every quarter. Windows 10 ESU (paid Extended Security Updates) is not taken into account",
+    "checked": "2026-11-18",
+    "table": [
+      {
+        "name": "Windows 10 22H2",
+        "build": 19045,
+        "group": "consumer",
+        "end": "2025-10-14"
+      },
+      {
+        "name": "Windows 10 22H2",
+        "build": 19045,
+        "group": "enterprise",
+        "end": "2025-10-14"
+      },
+      {
+        "name": "Windows 10 Enterprise LTSC 2021",
+        "build": 19044,
+        "group": "ltsc",
+        "end": "2027-01-12"
+      },
+      {
+        "name": "Windows 10 IoT Enterprise LTSC 2021",
+        "build": 19044,
+        "group": "iot_ltsc",
+        "end": "2032-01-13"
+      },
+      {
+        "name": "Windows 10 Enterprise LTSC 2019",
+        "build": 17763,
+        "group": "ltsc",
+        "end": "2029-01-09"
+      },
+      {
+        "name": "Windows 10 IoT Enterprise LTSC 2019",
+        "build": 17763,
+        "group": "iot_ltsc",
+        "end": "2029-01-09"
+      },
+      {
+        "name": "Windows 10 Enterprise LTSB 2016",
+        "build": 14393,
+        "group": "ltsc",
+        "end": "2026-10-13"
+      },
+      {
+        "name": "Windows 10 IoT Enterprise LTSB 2016",
+        "build": 14393,
+        "group": "iot_ltsc",
+        "end": "2026-10-13"
+      },
+      {
+        "name": "Windows 11 21H2",
+        "build": 22000,
+        "group": "consumer",
+        "end": "2023-10-10"
+      },
+      {
+        "name": "Windows 11 21H2",
+        "build": 22000,
+        "group": "enterprise",
+        "end": "2024-10-08"
+      },
+      {
+        "name": "Windows 11 22H2",
+        "build": 22621,
+        "group": "consumer",
+        "end": "2024-10-08"
+      },
+      {
+        "name": "Windows 11 22H2",
+        "build": 22621,
+        "group": "enterprise",
+        "end": "2025-10-14"
+      },
+      {
+        "name": "Windows 11 23H2",
+        "build": 22631,
+        "group": "consumer",
+        "end": "2025-11-11"
+      },
+      {
+        "name": "Windows 11 23H2",
+        "build": 22631,
+        "group": "enterprise",
+        "end": "2026-11-10"
+      },
+      {
+        "name": "Windows 11 24H2",
+        "build": 26100,
+        "group": "consumer",
+        "end": "2026-10-13"
+      },
+      {
+        "name": "Windows 11 24H2",
+        "build": 26100,
+        "group": "enterprise",
+        "end": "2027-10-12"
+      },
+      {
+        "name": "Windows 11 Enterprise LTSC 2024",
+        "build": 26100,
+        "group": "ltsc",
+        "end": "2029-10-09"
+      },
+      {
+        "name": "Windows 11 IoT Enterprise LTSC 2024",
+        "build": 26100,
+        "group": "iot_ltsc",
+        "end": "2034-10-10"
+      },
+      {
+        "name": "Windows 11 25H2",
+        "build": 26200,
+        "group": "consumer",
+        "end": "2027-10-12"
+      },
+      {
+        "name": "Windows 11 25H2",
+        "build": 26200,
+        "group": "enterprise",
+        "end": "2028-10-10"
+      },
+      {
+        "name": "Windows 11 26H1",
+        "build": 28000,
+        "group": "consumer",
+        "end": "2028-03-14"
+      },
+      {
+        "name": "Windows 11 26H1",
+        "build": 28000,
+        "group": "enterprise",
+        "end": "2029-03-13"
+      },
+      {
+        "name": "Windows 11 26H2",
+        "build": 26300,
+        "group": "consumer",
+        "end": "2028-10-10"
+      },
+      {
+        "name": "Windows 11 26H2",
+        "build": 26300,
+        "group": "enterprise",
+        "end": "2029-10-09"
+      }
+    ]
+  },
+  "evidence": {
+    "_comment": "Evidence screenshots (method A: window with the commands behind each verdict). Before: all items; after: auto-fixed items; PC-00: Settings > System > About. PC-20 is manual",
+    "enabled": true
+  }
+}

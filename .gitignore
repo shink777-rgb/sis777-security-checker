@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# PyInstaller / build.bat output
+build/
+dist/
+*.spec
+build_log.txt
+build_status.txt
+
+# local helper scripts and logs
+check_env.bat
+env_log.txt
+test_pc00.*
+pc00_test*
+
+
+# never commit run-time data or secrets
+usb_whitelist.json
+*.log
+**/evidence/
+**/reports/
+**/backup/
+history.db
+pcinfo.json
+
+# the checklist form is not distributed — keep your own copy out of the repository
+templates/*.docx
